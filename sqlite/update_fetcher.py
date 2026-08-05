@@ -3,17 +3,35 @@ import sqlite3
 conn = sqlite3.connect("package_registry.db")
 cur = conn.cursor()
 
-cur.execute("""
+cur.executescript("""
+UPDATE packages
+SET fetcher = 'GitHubFetcher'
+WHERE download_url LIKE 'https://github.com/%';
+
+UPDATE packages
+SET fetcher = 'PyPIFetcher'
+WHERE download_url LIKE 'https://pypi.org/%'
+   OR download_url LIKE 'https://files.pythonhosted.org/%';
+
+UPDATE packages
+SET fetcher = 'SourceForgeFetcher'
+WHERE download_url LIKE '%sourceforge.net/%'
+   OR download_url LIKE '%downloads.sourceforge.net/%'
+   OR download_url LIKE '%prdownloads.sourceforge.net/%';
+
+UPDATE packages
+SET fetcher = 'GenericFetcher'
+WHERE download_url LIKE '%cpan.metacpan.org/%'
+   OR download_url LIKE '%www.cpan.org/%';
+
 UPDATE packages
 SET fetcher = 'IndexFetcher'
-WHERE download_url NOT LIKE '%github.com%'
-  AND download_url NOT LIKE '%pypi.org%'
-  AND download_url NOT LIKE '%pythonhosted.org%'
-  AND download_url NOT LIKE '%sourceforge.net%'
-  AND download_url NOT LIKE '%cpan%'
+WHERE fetcher IS NULL
+   OR fetcher = '';
 """)
 
-print(f"Updated {cur.rowcount} rows.")
-
 conn.commit()
+
+print("Fetchers updated successfully.")
+
 conn.close()

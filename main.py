@@ -6,6 +6,7 @@ from registry import get_packages
 from fetchers.index import IndexFetcher
 from fetchers.github import GitHubFetcher
 
+import re
 
 
 FETCHERS = {
@@ -27,23 +28,7 @@ downloader = Downloader()
 packages = get_packages()
 
 
-
 for package in packages:
-
-
-    fetcher_name = package["fetcher"]
-
-
-    if fetcher_name not in FETCHERS:
-
-        print(
-            f"[SKIP] {package['package_name']} "
-            f"({fetcher_name})"
-        )
-
-        continue
-
-
 
     print("=" * 60)
 
@@ -51,74 +36,73 @@ for package in packages:
         package["package_name"]
     )
 
-
-    fetcher = FETCHERS[fetcher_name](
-        package
-    )
-
-
     try:
 
+        if "github.com" in package["download_url"]:
 
-        releases = fetcher.fetch_releases()
+            fetcher = GitHubFetcher(
+                package
+            )
+
+        else:
+
+            fetcher = IndexFetcher(
+                package
+            )
 
 
+        assets = fetcher.discover()
 
-        for release in releases:
 
+        filename = (
+            package["download_url"]
+            .split("/")[-1]
+        )
+
+        version = re.sub(
+            r"\.(tar\.gz|tar\.xz|tar\.bz2|tgz)$",
+            "",
+            filename
+        )
+
+
+        version_directory = (
+            directory_manager.create_version(
+                package["package_name"],
+                version
+            )
+        )
+
+
+        downloader.download(
+            assets=assets,
+            destination=version_directory
+        )
+
+
+        for asset in assets:
 
             print(
-                f"Version : {release['version']}"
+                "  ",
+                asset["name"]
             )
 
-            print(
-                f"Published : {release['published']}"
-            )
-
-
-            version_directory = (
-                directory_manager.create_version(
-                    package["package_name"],
-                    release["version"]
-                )
-            )
-
-
-            downloader.download(
-                assets=release["assets"],
-                destination=version_directory
-            )
-
-
-
-            for asset in release["assets"]:
-
-                print(
-                    "  ",
-                    asset["name"]
-                )
-
-
-            print()
-
+        print()
 
 
     except Exception as e:
 
-
         with open(
-            "errors.log",
+            "errors_2.log",
             "a"
         ) as f:
 
             f.write(
                 f"[ERROR] "
-                f"{package['package_name']} "
-                f"({fetcher_name}): "
+                f"{package['package_name']}: "
                 f"{package['source_url']} "
                 f"{e}\n"
             )
-
 
         print(
             f"[ERROR] {e}"

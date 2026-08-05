@@ -1,0 +1,3 @@
+[ERROR] expat (SourceForgeFetcher): (https://sourceforge.net/projects/expat/files/expat-2.2.10.tar.xz/download) 404 Client Error: Not Found for url: https://sourceforge.net/projects/expat/files/expat-2.2.10.tar.xz/download
+[ERROR] file (IndexFetcher): (http://ftp.astron.com/pub/file/file-5.39.tar.gz) HTTPSConnectionPool(host='astron.com', port=443): Max retries exceeded with url: /pub/file/ (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001A00473AC10>, 'Connection to astron.com timed out. (connect timeout=30)'))
+[ERROR] intltool (IndexFetcher): (https://launchpad.net/intltool/trunk/0.51.0/+download/intltool-0.51.0.tar.gz) 404 Client Error: Not Found for url: https://launchpad.net/intltool/trunk/0.51.0/+download/

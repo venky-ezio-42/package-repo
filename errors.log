@@ -1,13 +1,13 @@
 [ERROR] file (IndexFetcher): https://astron.com/pub/file/ <urlopen error [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
-[ERROR] intltool (IndexFetcher): https://launchpad.net/intltool/trunk/0.51.0/+download/ HTTP Error 404: Not Found
-[ERROR] iproute2 (IndexFetcher): https://www.kernel.org/pub/linux/utils/net/iproute2/ No tables found
-[ERROR] kbd (IndexFetcher): https://www.kernel.org/pub/linux/utils/kbd/ No tables found
-[ERROR] kmod (IndexFetcher): https://www.kernel.org/pub/linux/utils/kernel/kmod/ No tables found
-[ERROR] less (IndexFetcher): https://www.greenwoodsoftware.com/less/ 
-[ERROR] lfs-bootscripts (IndexFetcher): https://www.linuxfromscratch.org/lfs/downloads/13.0/ HTTP Error 404: Not Found
-[ERROR] libcap (IndexFetcher): https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/ No tables found
-[ERROR] linux (IndexFetcher): https://www.kernel.org/pub/linux/kernel/v6.x/ No tables found
-[ERROR] man-pages (IndexFetcher): https://www.kernel.org/pub/linux/docs/man-pages/ No tables found
+[ERROR] intltool (IndexFetcher): https://launchpad.net/intltool/trunk/0.51.0/+download/ HTTP Error 404: Not Found --> class=listing id=series-trunk
+[ERROR] iproute2 (IndexFetcher): https://www.kernel.org/pub/linux/utils/net/iproute2/ No tables found --> pre
+[ERROR] kbd (IndexFetcher): https://www.kernel.org/pub/linux/utils/kbd/ No tables found --> pre
+[ERROR] kmod (IndexFetcher): https://www.kernel.org/pub/linux/utils/kernel/kmod/ No tables found --> pre
+[ERROR] less (IndexFetcher): https://www.greenwoodsoftware.com/less/  --> https://www.greenwoodsoftware.com/less/download.html in list / downlaod url is diff
+[ERROR] lfs-bootscripts (IndexFetcher): https://www.linuxfromscratch.org/lfs/downloads/13.0/ HTTP Error 404: Not Found --> (?)
+[ERROR] libcap (IndexFetcher): https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/ No tables found --> pre
+[ERROR] linux (IndexFetcher): https://www.kernel.org/pub/linux/kernel/v6.x/ No tables found --> pre
+[ERROR] man-pages (IndexFetcher): https://www.kernel.org/pub/linux/docs/man-pages/ No tables found --> pre
 [ERROR] pkgconf (IndexFetcher): https://distfiles.ariadne.space/pkgconf/ No tables found
 [ERROR] Python (IndexFetcher): https://www.python.org/ftp/python/3.14.3/ No tables found
 [ERROR] python (IndexFetcher): https://www.python.org/ftp/python/doc/3.14.3/ No tables found
