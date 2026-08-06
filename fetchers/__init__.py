@@ -1,2 +1,4 @@
-from .github import GitHubFetcher
-from .index import IndexFetcher
+from .github_v2 import GitHubFetcher
+from .index_fetcher_v2 import IndexFetcher
+from .pypi_fetcher import PyPIFetcher
+from .sourceforge_fetcher import SourceForgeFetcher

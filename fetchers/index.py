@@ -67,11 +67,11 @@ class IndexFetcher:
         )
 
 
-        package_list.sort_values(
-            by=date_col,
-            ascending=False,
-            inplace=True
-        )
+        # package_list.sort_values(
+        #     by=date_col,
+        #     ascending=False,
+        #     inplace=True
+        # )
 
 
         releases = defaultdict(list)

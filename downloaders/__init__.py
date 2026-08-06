@@ -1,2 +1,2 @@
 from .directory import DirectoryManager
-from .download import Downloader
+from .downloader_v2 import Downloader
