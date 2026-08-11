@@ -2,7 +2,7 @@ import sqlite3
 
 def get_packages():
 
-    conn = sqlite3.connect("sqlite/package_registry.db")
+    conn = sqlite3.connect("../sqlite/package_registry_v2.db")
     conn.row_factory = sqlite3.Row
 
     cur = conn.cursor()
@@ -10,7 +10,6 @@ def get_packages():
     cur.execute("""
         SELECT *
         FROM packages
-        WHERE enabled = 1
         order by package_name
     """)
 
