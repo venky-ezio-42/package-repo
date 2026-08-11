@@ -1,0 +1,7 @@
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.7 (GNU/Linux)
+
+iD8DBQBJr4MgNgKwf1XQxzIRAtAnAJ9/qDj5OwaoEbTf7OsRS71VeCZGiACgiofV
+Bh4dy4u9Zoz8uCtYvg8F160=
+=5BwZ
+-----END PGP SIGNATURE-----

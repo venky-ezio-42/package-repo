@@ -1,0 +1,18 @@
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1
+Comment: Colin Watson <cjwatson@debian.org> -- Debian developer
+
+iQIVAwUAUzK7cTk1h9l9hlALAQg3FxAApTujyomYZwzV8MJibh/I6NiUrlI1vfit
+a/Chk9o4mE0XE7BcjGbtXmT8jobh5K6Ygj2LzjWFMn+S4FHEZQgIPPS/u9TFQ9JK
+f5y+b9p4yzmNEitYiSzdLDnSr0DftlOlyNkuvfbqniSGumbcJ5cKeiJJN5AyQc1T
+D17zXs3qDaK+kPKlUXQ4uOkJOqLDLwWoJAag4uvYN9Xt7QSed8qHsdNaUJ5wlgCv
+Jc8mbXu8pZGpi3UukqaWdmM0r572CWO2vhV0gadnzFTE9izCXSaCnuqx3RxDs167
+wnyhpHsVZGtbW8ss1WTYTECMrtI34vg7fxui9VGOP0b2WVz6cuJSsAwUU3cknFEZ
+4JL4w5lgIyhfStZSV4vkDDVZ/2DrA85xZphOLYW+1vQiu9WEIifNXanFH3Nz2zdg
+sCrBuQhz1fYk32zv/BdmuswABMEeyKQDJVAALrJl6a94qj7iKFxW6VGPZD/4aI9I
+4SpJ+Utrdj4leZcLFHc2Yatpv/YoxXW6c4jQ9as9cSqlxnY0fA74ciDI9LKstCuw
+7qnDBQdB7pzcJ5qBibdIxPWWGkejB7PfkkMhnzM2u9lto83UmF85UOAk8QU3YBJW
+J1XB8YEBmS0R9r8PG0zfvLGxWjFngjRZiaIcs8mCdE2zsi5wwnKGkdOfje+k3sVU
+rermAzcwDBo=
+=4w35
+-----END PGP SIGNATURE-----

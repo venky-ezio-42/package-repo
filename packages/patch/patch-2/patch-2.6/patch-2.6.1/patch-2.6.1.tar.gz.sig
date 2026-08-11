@@ -1,0 +1,7 @@
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v2.0.12 (GNU/Linux)
+
+iEYEABECAAYFAks7fq8ACgkQ9+hy/rlxVNO6pwCeNaJXZevI7STIwhOYtOOVaERs
+7EkAn25nzzYE1rdpLOiXIeQTZucV9FNp
+=stuB
+-----END PGP SIGNATURE-----
